@@ -44,9 +44,7 @@ npm install
 npm run dev
 ```
 
-## 🖼️ Dashboard Preview
-
-![Dashboard Preview](./src/assets/heart.png)
+## 🖼️ Dashboard Preview - https://health-care-dashboard-indol.vercel.app/
 
 ## 📦 Tech Stack
 
