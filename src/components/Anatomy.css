@@ -1,0 +1,252 @@
+/* Anatomy.css - Anatomy Component Styles */
+
+.anatomy-section {
+  background: white;
+  border-radius: 1rem;
+  padding: 4rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  width:fit-content ;
+}
+
+.anatomy-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+}
+
+.anatomy-figure {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.anatomy-image {
+  width: 200px;
+  height: 400px;
+  object-fit: contain;
+}
+
+.anatomy-indicators {
+  position: relative;
+}
+
+.health-indicator {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.indicator-heart {
+  top: 100px;
+  left: -50px;
+  background: #3b82f6;
+  color: white;
+}
+
+.indicator-heart::before {
+  content: '❤️';
+  margin-right: 0.25rem;
+}
+
+.indicator-log {
+  bottom: 50px;
+  left: -80px;
+  background: #06b6d4;
+  color: white;
+}
+
+.anatomy-stats {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.health-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 1rem;
+  border-left: 4px solid;
+  transition: all 0.2s ease;
+}
+
+.health-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.health-card.lungs {
+  border-left-color: #ef4444;
+}
+
+.health-card.teeth {
+  border-left-color: #10b981;
+}
+
+.health-card.bone {
+  border-left-color: #f59e0b;
+}
+
+.health-icon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  background: white;
+}
+
+.health-info {
+  flex: 1;
+}
+
+.health-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.health-date {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.health-progress {
+  width: 100%;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.progress-bar.red {
+  background: #ef4444;
+  width: 75%;
+}
+
+.progress-bar.green {
+  background: #10b981;
+  width: 90%;
+}
+
+.progress-bar.orange {
+  background: #f59e0b;
+  width: 60%;
+}
+
+.activity-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.activity-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.activity-subtitle {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.activity-chart {
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+  height: 120px;
+  padding: 1rem 0;
+}
+
+.chart-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.bar {
+  width: 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.bar:hover {
+  transform: scaleX(1.5);
+}
+
+.bar.cyan {
+  background: #06b6d4;
+}
+
+.bar.blue {
+  background: #3b82f6;
+}
+
+.bar.purple {
+  background: #8b5cf6;
+}
+
+.chart-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  writing-mode: horizontal-tb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .anatomy-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .anatomy-figure {
+    order: 2;
+  }
+  
+  .anatomy-stats {
+    order: 1;
+    width: 100%;
+  }
+  
+  .health-indicator {
+    position: static;
+    margin: 0.5rem;
+    display: inline-flex;
+  }
+  
+  .anatomy-image {
+    width: 350px;
+    height: 300px;
+  }
+}
