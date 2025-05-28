@@ -4,7 +4,7 @@ A modern and responsive React-based healthcare dashboard featuring an anatomy se
 
 ## 🚀 Live Demo
 
-[View on Vercel]((https://health-care-dashboard-indol.vercel.app))
+[View on Vercel]([(https://health-care-dashboard-indol.vercel.app)])
 
 ## 📁 Project Structure
 
